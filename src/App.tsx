@@ -1,7 +1,12 @@
 import './App.scss';
+import { Startpage } from './pages/Startpage';
 
 function App() {
-	return <>JetBrains font test</>;
+	return (
+		<>
+			<Startpage />
+		</>
+	);
 }
 
 export default App;

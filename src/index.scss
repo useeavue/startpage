@@ -1,3 +1,5 @@
+@import './variables';
+
 :root {
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -19,15 +21,31 @@
 body {
 	min-height: 100vh;
 	font-family: JetBrains, monospace;
+	color: $baseText;
 }
 
 a {
-	color: #c5c5c5;
+	color: $baseText;
 	font-size: 1.1em;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #5e5e5e;
+	color: $hoverLinkText;
 	font-style: italic;
+}
+
+h1 {
+	font-size: 2.2em;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: 600;
+	color: $baseText;
+	text-align: center;
+	margin-bottom: 2.3em;
 }
