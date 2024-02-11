@@ -1,6 +1,5 @@
 export interface INavigationLink {
-	url: string;
-	title: string;
+	value: string;
 }
 
 export interface INavigationItem {

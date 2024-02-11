@@ -5,10 +5,12 @@ type Props = {
 	data: INavigationItem | null;
 };
 
-export const NavigationItem: React.FC<Props> = ({ data }) => {
+export const NavigationItemEdit: React.FC<Props> = ({ data }) => {
 	return data ? (
 		<ul>
-			<li>{data.title}</li>
+			<li>
+				<input type='text' value={data.title} />
+			</li>
 			{data.links.map(link => {
 				const [url, title] = link.value.split('|');
 
