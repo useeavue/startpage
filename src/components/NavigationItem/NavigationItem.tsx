@@ -2,7 +2,7 @@ import React from 'react';
 import { INavigationItem } from '../../models/navigation';
 
 type Props = {
-	data: INavigationItem;
+	data: INavigationItem | null;
 };
 
 export const NavigationItem: React.FC<Props> = ({ data }) => {

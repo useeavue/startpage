@@ -1,11 +1,11 @@
 import React from 'react';
 import { getFormattedDate } from '../../utils/date';
 
-export const Date: React.FC = () => {
+export const DateComponent: React.FC = () => {
 	const [date, setDate] = React.useState(getFormattedDate());
 
 	React.useEffect(() => {
-		const timeoutId = setInterval(() => {
+		const timeoutId: number = setInterval(() => {
 			setDate(getFormattedDate());
 		}, 0);
 

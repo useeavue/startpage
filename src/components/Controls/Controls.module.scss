@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.controls {
+	position: absolute;
+	bottom: 2rem;
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+
+	button {
+		font-family: JetBrains, monospace;
+		background: none;
+		color: $baseText;
+		font-size: 1.1em;
+		text-decoration: none;
+		border: none;
+		cursor: pointer;
+
+		&:hover {
+			color: $hoverLinkText;
+		}
+	}
+}

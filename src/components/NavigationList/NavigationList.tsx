@@ -1,17 +1,27 @@
 import React from 'react';
 
-import { Date } from '../Date/Date';
+import { DateComponent } from '../DateComponent/DateComponent';
 
 import styles from './NavigationList.module.scss';
+import { INavigationItem } from '../../models/navigation';
+import { NavigationItem } from '../NavigationItem/NavigationItem';
 
-export const NavigationList: React.FC = () => {
+type Props = {
+	items: INavigationItem[] | null;
+	setItems: React.Dispatch<React.SetStateAction<INavigationItem[] | null>>;
+};
+
+export const NavigationList: React.FC<Props> = ({ items, setItems }) => {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.title}>
 				<h1>Welcome back!</h1>
-				<Date />
+				<DateComponent />
 			</div>
-			<ul>
+			{items
+				? items.map(item => <NavigationItem key={item.id} data={item} />)
+				: null}
+			{/* <ul>
 				<li>~/general </li>
 				<li>
 					<a href='https://gmail.com/'>Gmail</a>
@@ -84,7 +94,7 @@ export const NavigationList: React.FC = () => {
 				<li>
 					<a href='https://reddit.com/r/linux_gaming/'>r/linux_gaming</a>
 				</li>
-			</ul>
+			</ul> */}
 		</nav>
 	);
 };
